@@ -1,3 +1,19 @@
+# Práctica 14 – La tienda contra su API
+
+## Preguntas
+
+### ¿Por qué en la pestaña Red salen dos peticiones al cargar?
+
+Porque en desarrollo el StrictMode monta el componente, lo desmonta y lo vuelve a montar para checar que el efecto se limpie bien, entonces el efecto corre dos veces y salen dos peticiones.
+
+### ¿Qué pasa si quitas el arreglo de dependencias del efecto?
+
+El efecto se ejecuta después de cada render, entonces pide los productos, el setProductos vuelve a pintar el componente, se vuelve a ejecutar el efecto y así se queda pidiendo y pidiendo los productos.
+
+### ¿Qué hace e.preventDefault() y qué pasa si lo quitas?
+
+Evita que el formulario recargue la página. Si lo quitas la página se recarga al darle pagar, se pierde lo que había en el estado.
+
 # Práctica 13 – La tienda: composición, eventos y estado
 
 ## Preguntas
